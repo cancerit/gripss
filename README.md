@@ -1,3 +1,5 @@
+Container for the GRIPSS filtering tool for filtering GRIDSS resutls
+
 See https://github.com/hartwigmedical/hmftools/tree/master/gripss
 
 ```
