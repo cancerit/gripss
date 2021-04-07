@@ -1,4 +1,4 @@
-#GRIPSS Dockerfile
+#  GRIPSS Dockerfile
 
 Container for the GRIPSS filtering tool for filtering GRIDSS resutls
 
