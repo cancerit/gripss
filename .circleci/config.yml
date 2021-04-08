@@ -24,6 +24,7 @@ jobs:
             set -e
             BRANCH_OR_TAG="${CIRCLE_TAG:-$CIRCLE_BRANCH}"
             CLEAN_BRANCH=$(echo $BRANCH_OR_TAG | tr / -)
+            echo 'login to Dockerhub & quay.io'
             docker login -u "$DOCKERHUB_USER" -p "$DOCKERHUB_PASSWORD"
             docker login -u "$QUAYIO_USER" -p "$QUAYIO_PASSWORD" quay.io
             docker build -t $IMAGE_NAME:$CLEAN_BRANCH .
