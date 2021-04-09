@@ -7,6 +7,7 @@
 # 3. If existing project with quay.io, remove the quay build triggers.
 #    - as circleci is pusing the image
 #    - reevaluate when/if quay.io adds ability to authenticate pulls
+#    - add casmservice to users of the repo (write permission)
 
 version: 2.1
 jobs:
