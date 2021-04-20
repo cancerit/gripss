@@ -7,7 +7,8 @@ See https://github.com/hartwigmedical/hmftools/tree/master/gripss
 ```
 Usage :
 
-docker run -v /path/to:/path/to DOCKER-IMAGE java -Xms4G -Xmx16G com.hartwig.hmftools.gripss.GripssApplicationKt \
+docker run -v /path/to:/path/to DOCKER-IMAGE \
+   java -Xms4G -Xmx16G com.hartwig.hmftools.gripss.GripssApplicationKt \
    -tumor SAMPLE_T \
    -reference SAMPLE_N \
    -ref_genome /path/to/Homo_sapiens_assembly.fasta \
@@ -18,7 +19,8 @@ docker run -v /path/to:/path/to DOCKER-IMAGE java -Xms4G -Xmx16G com.hartwig.hmf
    -output_vcf /path/to/SAMPLE_T.gridss.somatic.vcf.gz 
    
   
-docker run -v /path/to:/path/to DOCKER-IMAGE java -Xms4G -Xmx16G com.hartwig.hmftools.gripss.GripssHardFilterApplicationKt \
+docker run -v /path/to:/path/to DOCKER-IMAGE \
+   java -Xms4G -Xmx16G com.hartwig.hmftools.gripss.GripssHardFilterApplicationKt \
    -input_vcf /path/to/SAMPLE_T.gridss.somatic.vcf.gz \
    -output_vcf /path/to/SAMPLE_T.gridss.somatic.filtered.vcf.gz
 ```
