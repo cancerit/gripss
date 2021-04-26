@@ -1,6 +1,6 @@
 #  GRIPSS Dockerfile
 
-Container for the GRIPSS filtering tool for filtering GRIDSS resutls
+Container for the GRIPSS filtering tool for filtering GRIDSS resutls. This is for deployment purposes only, for issues contact original developers at Hartwig Medical foundation.
 
 See https://github.com/hartwigmedical/hmftools/tree/master/gripss
 
