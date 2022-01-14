@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 USER root
 
-ENV GRIPSS_VER="v2.0_beta"
+ENV GRIPSS_VER="v2.0"
 
 RUN apt-get -yq update
 ENV DEBIAN_FRONTEND "noninteractive"
