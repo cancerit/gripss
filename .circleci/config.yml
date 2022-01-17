@@ -16,7 +16,7 @@ jobs:
       IMAGE_NAME: quay.io/wtsicgp/gripss
     docker:
       - image: circleci/buildpack-deps:stretch
-    steps: 
+    steps:
       - checkout
       - setup_remote_docker
       - run:
@@ -30,7 +30,7 @@ jobs:
             docker login -u "$QUAYIO_USER" -p "$QUAYIO_PASSWORD" quay.io
             docker build -t $IMAGE_NAME:$CLEAN_BRANCH .
             echo 'Verify program(s) from this repo'
-            docker run -t --rm $IMAGE_NAME:$CLEAN_BRANCH bash -c "java com.hartwig.hmftools.gripss.GripssApplicationKt  | grep 'Missing required options' && echo 'gripss OK'"
+            docker run -t --rm $IMAGE_NAME:$CLEAN_BRANCH bash -c "java -jar /opt/wtsi-cgp/java/gripss.jar | grep 'invalid config, exiting' && echo 'gripss OK'"
             #if [ "$CIRCLE_TAG" = "$BRANCH_OR_TAG" ]; then
             #  echo 'Pushing image'
             #  docker push $IMAGE_NAME:$CLEAN_BRANCH
