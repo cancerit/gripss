@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 USER root
 
-ENV GRIPSS_VER="1.11"
+ENV GRIPSS_VER="v2.0"
 
 RUN apt-get -yq update
 ENV DEBIAN_FRONTEND "noninteractive"
@@ -26,7 +26,7 @@ ENV LANG en_US.UTF-8
 
 RUN mkdir -p ${JAVA}
 
-RUN wget -O ${JAVA}/gripss.jar https://github.com/hartwigmedical/hmftools/releases/download/gripss-v${GRIPSS_VER}/gripss-${GRIPSS_VER}.jar
+RUN wget -O ${JAVA}/gripss.jar https://github.com/hartwigmedical/hmftools/releases/download/gripss-${GRIPSS_VER}/gripss.jar
 ENV CLASSPATH ${JAVA}/gripss.jar
 
 ## USER CONFIGURATION
